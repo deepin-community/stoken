@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+# Build with all hardening options enabled
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# Link with --as-needed to eliminate unused or indirect library dependencies
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+export V = 1
+
+%:
+	dh $@
+
+override_dh_autoreconf:
+	dh_autoreconf --as-needed

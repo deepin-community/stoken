@@ -1,0 +1,2 @@
+# False positive, debhelper now implies autoconf-dev (see #820441)
+stoken source: outdated-autotools-helper-file

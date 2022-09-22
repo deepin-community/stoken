@@ -1,0 +1,4 @@
+version=3
+
+opts=uversionmangle=s/^(0\.9)$/$10/,pgpsigurlmangle=s/$/.asc/ \
+	http://sf.net/stoken/stoken-(.+)\.tar\.gz
